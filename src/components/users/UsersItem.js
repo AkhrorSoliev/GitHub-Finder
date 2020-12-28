@@ -1,38 +1,30 @@
 import React from 'react'
 
 class Usersitem extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            id: 'id',
-            login: 'wayneeseguin',
-            avatar_url: 'https://avatars0.githubusercontent.com/u/18?v=4',
-            html_url: 'https://github.com/wayneeseguin',
-        }
-    }
-    render() {
-        return (
-            <div className="card text-conter">
-                <img
-                    src={this.state.avatar_url}
-                    alt="avatar"
-                    className="round-img"
-                    style={{
-                        width: '60px',
-                    }}
-                />
+  render() {
+    const { login, avatar_url, html_url } = this.props.user
 
-                <h2>{this.state.login}</h2> 
+    return (
+      <div className="card text-conter">
+        <img
+          src={avatar_url}
+          alt="avatar"
+          className="round-img"
+          style={{
+            width: '60px',
+          }}
+        />
 
-                <div>
-                    <a href={this.state.html_url}
-                        className="btn btn-dark btn-sm my-1"
-                    >More</a>
-                </div>
+        <h2>{login}</h2>
 
-            </div>
-        )
-    }
+        <div>
+          <a href={html_url} className="btn btn-dark btn-sm my-1">
+            More
+          </a>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Usersitem
