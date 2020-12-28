@@ -1,12 +1,8 @@
 import React from 'react'
 import GitHub from '../icons/githubicon.svg'
 
-class Navbar extends React.Component {
-    // constructor() {
-    //     super()
-    //     this.state = {}
-    // }
-    render() {
+const Navbar = () => {
+
         return (
             <nav className="navbar bg-primary">
                 <h1 >
@@ -14,7 +10,6 @@ class Navbar extends React.Component {
                 </h1>
             </nav>
         )
-    }
 }
 
 export default Navbar
