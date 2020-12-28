@@ -33,13 +33,7 @@ class Users extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          display: 'grid',
-          girdTemplateColumns: 'repeat(4, 1fr)',
-          gridGap: '1rem',
-        }}
-      >
+      <div className="grid-4">
         {this.state.users.map((user) => (
           <Usersitem key={user.id} user={user} />
         ))}
